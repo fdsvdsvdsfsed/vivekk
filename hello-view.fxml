@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox alignment="CENTER" spacing="10.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.lab.CrudController">
+    <padding>
+        <Insets bottom="20" left="20" right="20" top="20" />
+    </padding>
+    <Label text="Task Management" />
+    <TextField fx:id="taskIdField" promptText="Task ID" />
+    <TextField fx:id="taskNameField" promptText="Task Name" />
+    <TextField fx:id="taskDescriptionField" promptText="Task Description" />
+    <TextField fx:id="taskStatusField" promptText="Task Status" />
+    <Button text="Insert" onAction="#handleInsert" />
+    <Button text="Update" onAction="#handleUpdate" />
+    <Button text="Delete" onAction="#handleDelete" />
+    <Button text="Load" onAction="#handleLoad" />
+    <Button text="Fetch" onAction="#handleFetch" />
+    <TableView fx:id="taskTable">
+        <columns>
+            <TableColumn fx:id="taskIdColumn" text="Task ID" />
+            <TableColumn fx:id="taskNameColumn" text="Task Name" />
+            <TableColumn fx:id="taskDescriptionColumn" text="Task Description" />
+            <TableColumn fx:id="taskStatusColumn" text="Task Status" />
+        </columns>
+    </TableView>
+</VBox>
